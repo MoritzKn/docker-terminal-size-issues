@@ -28,7 +28,7 @@ docker build . -t getsize && docker run -t getsize tput lines
 # --> Should return 24
 ```
 
-## The issue
+## The Underlying Issue
 
 > `docker run -it` (`docker run`) is basically a shorthand implemented in the client that consists of three separate actions;
 >
@@ -45,6 +45,8 @@ See also:
  on StackOverflow](https://stackoverflow.com/questions/38786615/docker-number-of-lines-in-terminal-changing-inside-docker/38825323#38825323)
 
 It seems like this was fixed by [moby/moby#37172](https://github.com/moby/moby/pull/37172) in [Docker 18.06.0-ce](https://github.com/docker/docker-ce/releases/tag/v18.06.0-ce) but I'm still seeing this in `Docker 20.10.8`.
+
+Hance I opend a [new issue](https://github.com/moby/moby/issues/43229).
 
 ## Workaround
 
